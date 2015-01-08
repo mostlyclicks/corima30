@@ -8,6 +8,13 @@
     <%= f.text_field :name, :class => 'larger widest' -%>
   </div>
 
+  <% @related_wheels = Refinery::Wheels::Wheel.all %>
+
+  <div class="field">
+    <%= f.label 'Related Wheel Front/Rear' %>
+    <%= f.select(:related_wheel_frrr_id, @related_wheels.collect { |w| [w.name, w.id]}) %>
+  </div>
+
   <div class='field'>
     <%= f.label :wheel_image_1 -%>
     <%= render '/refinery/admin/image_picker',
@@ -87,10 +94,13 @@
     <%= f.text_field :model -%>
   </div>
 
-  <div class='field'>
-    <%= f.label :related_wheel_frrr_id -%>
-    <%= f.number_field :related_wheel_frrr_id -%>
-  </div>
+<!--   <div class='field'>
+    <%#= f.label :related_wheel_frrr_id -%>
+    <%#= f.number_field :related_wheel_frrr_id -%>
+  </div> -->
+
+
+
 
   <div class='field'>
     <%= f.label :related_wheel_type_id -%>
