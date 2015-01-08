@@ -36,6 +36,8 @@ GEM
     bcrypt (3.1.9)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
+    bootstrap-sass (3.3.1.0)
+      sass (~> 3.2)
     builder (3.0.4)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -191,7 +193,7 @@ GEM
       refinerycms-core (= 2.1.5)
     routing-filter (0.3.1)
       actionpack
-    sass (3.4.9)
+    sass (3.2.19)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -222,6 +224,7 @@ PLATFORMS
 
 DEPENDENCIES
   babosa (= 0.3.11)
+  bootstrap-sass
   coffee-rails (~> 3.2.1)
   fog
   foundation-rails
@@ -231,6 +234,6 @@ DEPENDENCIES
   rails_12factor
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
-  sass
+  sass (~> 3.2.19)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)

@@ -8,7 +8,8 @@ gem 'rails', '3.2.18'
 gem 'pg'
 gem 'fog'
 gem 'rails_12factor'
-gem "sass"
+gem 'bootstrap-sass'#, '~> 3.1.1'
+gem "sass", "~> 3.2.19"
 gem 'sass-rails',   '~> 3.2.3'
 gem 'foundation-rails'
 
