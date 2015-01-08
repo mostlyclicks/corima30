@@ -1,0 +1,4 @@
+Custom Engine Generate Commands
+
+#Wheels
+rails generate refinery:engine wheel name:string wheel_image_1:image rim_type:string diameter:string front_rear:string type_of_use:string width:string profile:string spoke_count:string spoke_type:string hub_type:string hub_finish:string carbon_weave:string weight:integer max_air_pressure:string model:string related_wheel_frrr_id:integer related_wheel_type_id:integer
