@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <ul>
+        <% @mcc_splus_wheels.each do |w| %>
+          <li><%= link_to w.name, refinery.wheels_wheel_path(w) %></li>
+        <% end %>
+      </ul>
+
+
+    </div>
+  </div>
+</div>
+<h1>Wheels</h1>
+

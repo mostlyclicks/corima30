@@ -8,4 +8,37 @@
   </ul>
 <% end %>
 
-<%= render '/refinery/content_page' %>
+<%#= render '/refinery/content_page' %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <ul>
+        <% @mcc_splus_wheels.each do |w| %>
+          <li><%= link_to w.name, refinery.wheels_wheel_path(w) %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <ul>
+        <% @splus_wheels.each do |w| %>
+          <li><%= link_to w.name, refinery.wheels_wheel_path(w) %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <ul>
+        <% @s_wheels.each do |w| %>
+          <li><%= link_to w.name, refinery.wheels_wheel_path(w) %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <ul>
+        <% @no_s_wheels.each do |w| %>
+          <li><%= link_to w.name, refinery.wheels_wheel_path(w) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

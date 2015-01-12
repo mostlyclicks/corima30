@@ -1,0 +1,6 @@
+<h1>S</h1>
+<ul>
+<% @s_wheels.each do |w| %>
+  <li><%= link_to w.name, refinery_wheels_wheel_path(w) %></li>
+<% end %>
+</ul>
