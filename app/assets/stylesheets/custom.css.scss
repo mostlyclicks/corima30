@@ -1,0 +1,19 @@
+@import 'bs-overrides';
+
+$rand_num:random(500);
+
+//HOME
+#home-main {
+  padding:60px 20px;
+  min-height:500px;
+  
+  background-repeat:no-repeat;
+  background-size:205%;
+  background-position-y:57%;
+  
+  h1 {
+    font-family:$roboto;
+    font-weight:100;
+    text-align:center;   
+  }
+}
