@@ -17,3 +17,15 @@ $rand_num:random(500);
     text-align:center;   
   }
 }
+
+//WHEEL SHOW
+#wheel-show-images {
+  background-repeat:no-repeat;
+  background-size:205%;
+  background-position-y:57%;
+  img {
+    background-color:rgba(255,255,255,.9);
+    border:1px solid rgba(200,200,200,.8);
+    margin:10px 10px 25px 0;
+  }
+}
