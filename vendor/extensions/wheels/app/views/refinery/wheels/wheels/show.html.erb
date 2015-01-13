@@ -73,24 +73,52 @@
       <div class="col-md-9">
         <div class="row">
           <div class="col-md-7">
-            <%= image_fu @wheel.wheel_image_1, '900x900', class: 'img-responsive' %>
+            <%= image_fu @wheel.wheel_image_1, '1080x1080', class: 'img-responsive' %>
           </div>
           <div class="col-md-5">
-            <%= image_fu @wheel.wheel_image_1, '500x400c', class: 'img-responsive' %>
-            <%= image_fu @wheel.wheel_image_1, '500x400w', class: 'img-responsive' %>
+            <div class="row">
+              <div class="col-sm-6 col-md-12"><%= image_fu @wheel.wheel_image_1, '500x400c', class: 'img-responsive' %>
+              </div>
+              <div class="col-sm-6 col-md-12"><%= image_fu @wheel.wheel_image_1, '500x400w', class: 'img-responsive' %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-md-3">
+        
+        <h3>Related Wheels</h3>
+        <% @all_wheels = Refinery::Wheels::Wheel.all %>
+        <div class="row">
+          <div class="col-xs-6">
+            <% get_frrr_wheel(@wheel.related_wheel_frrr_id) %>
+            <%= image_fu @related_frrr_wheel.wheel_image_1, '600x600', class: 'img-responsive' %>
+            <caption><%= link_to @related_frrr_wheel.name, refinery.wheels_wheel_path(@related_frrr_wheel) %></caption>
+          </div>
+          <div class="col-xs-6">
+            <% get_related_wheel(@wheel.related_wheel_type_id) %>
+            <%= image_fu @related_wheel.wheel_image_1, '600x600', class: 'img-responsive' %>
+            <caption><%= link_to @related_wheel.name, refinery.wheels_wheel_path(@related_wheel) %></caption>
+          </div>
+        </div>
+
+        <h3>All <%= @wheel.hub_type %> Wheels</h3>
         <% get_cat_wheels(@wheel.hub_type) %>
         <% @cat_wheels.each do |cw| %>
           <%= link_to cw.name, refinery.wheels_wheel_path(cw) %><br />
         <% end %>
+
+
+
+
+
+
       </div>
+
   </div>
 </section>
 
-<section></section>
+
 
 
 <% content_for :body_content_title do %>
