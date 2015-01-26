@@ -1,6 +1,20 @@
-<h1>S</h1>
-<ul>
-<% @s_wheels.each do |w| %>
-  <li><%= link_to w.name, refinery_wheels_wheel_path(w) %></li>
-<% end %>
-</ul>
+<section id="l2-wheels">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>CORIMA MCC S+</h1>
+        <p>The MCC “S+” wheels are the lightest in our product range! The MCC “S+” wheels are available in 24 mm, 32 mm and 47 mm in tubular version and <span>(new!)</span> the 47 mm model is now also available in clincher version!! They are built with the very light carbon “S+” hubs on which the CORIMA logo is engraved. The wheels are made entirely of carbon from the rims to the hubs and spokes. The front wheel has 12 blade shaped spokes for better aerodynamics while the rear wheel has 12 conical shaped spokes for increased stiffness. Each wheel is supplied with a titanium skewer with a carbon lever displaying the CORIMA logo. 8 different wheel decal colours are available in order to match your MCC “S+” wheels to your frame color.</p>
+      </div>
+    </div>
+    <div class="row">
+      <% @s_wheels.each do |w| %>
+        <div class="col-md-3 col-xs-6">
+          <%= image_fu w.wheel_image_1, '400x400', class: 'img-responsive' %>
+          <%= w.name %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+

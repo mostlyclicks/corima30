@@ -1,12 +1,13 @@
 <%#= render '/refinery/content_page' %>
-<% @bg_colors = ["mint", "gray", "violet", "yellow", "blue"] %>
+<% @bg_colors = ["red", "gray", "violet", "yellow", "blue"] %>
 <% @bg_image = @bg_colors.sample %>
-<% @rand_num = rand(5-95) %>
+<% @rand_offset_num = rand(5...95) %>
+<% @rand_color_num = rand(1...7) %>
 
 <style>
   #home-main {
-    background-image:url(/assets/bg-<%= @bg_image %>.gif);
-    background-position-x:<%= @rand_num %>%;
+    background-image:url(/assets/bg-<%= @rand_color_num %>-<%= @bg_image %>.gif);
+    background-position-x:<%= @rand_offset_num %>%;
   }
 </style>
 
