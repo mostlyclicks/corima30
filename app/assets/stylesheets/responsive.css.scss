@@ -5,6 +5,22 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+  #home-main {
+    position:relative;
+    h1 {
+      position:absolute;
+      left:65%;
+      top:350px;
+    }
+  }
+  #home-wheels {
+    background-size:100%;
+  }
+
+  footer {
+    min-height:200px;
+    margin-top:20px;
+  }
 
 
 }
