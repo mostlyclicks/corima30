@@ -6,7 +6,7 @@
 <style>
   #wheel-show-images {
     background-image:url(/assets/bg-<%= @rand_color_num %>-<%= @bg_image %>.gif);
-    background-position-x:<%= @rand_offset_num %>%;
+    /*background-position-x:<%= @rand_offset_num %>%;*/
   }
 </style>
 
@@ -14,56 +14,9 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-md-6">
-        <h1><%= @wheel.name %></h1>
-        <p>Carbon hub and spokes. 24mm rim. Yadayayayad</p>
-      </div>
 
-      <div class="col-md-3">
-        <table class="table table-striped">
-          <tbody>
-            <tr>
-              <td width="100">Profile:</td>
-              <td><%= @wheel.profile %>mm</td>
-            </tr>
-            <tr>
-              <td width="100">Spoke Count:</td>
-              <td><%= @wheel.spoke_count %></td>
-            </tr>    
-            <tr>
-              <td width="100">Spoke Type:</td>
-              <td><%= @wheel.spoke_type %></td>
-            </tr>
-            <tr>
-              <td width="100">Hub Material:</td>
-              <td><%= @wheel.hub_finish %></td>
-            </tr>        
-          </tbody>
-        </table>
-      </div>
+      
 
-      <div class="col-md-3">
-        <table class="table table-striped">
-          <tbody>
-            <tr>
-              <td width="100">Weight:</td>
-              <td><%= @wheel.weight %> grams</td>
-            </tr>
-            <tr>
-              <td width="100">Carbon Weave:</td>
-              <td><%= @wheel.carbon_weave %></td>
-            </tr>    
-            <tr>
-              <td width="100">Type of Use:</td>
-              <td><%= @wheel.type_of_use %></td>
-            </tr>
-            <tr>
-              <td width="100">Diameter:</td>
-              <td><%= @wheel.diameter %></td>
-            </tr>        
-          </tbody>
-        </table>
-      </div>
     </div>
   </div>
 </section>
@@ -71,24 +24,77 @@
 <section id="wheel-show-images">
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
-        <div class="row">
-          <div class="col-md-7">
-            <%= image_fu @wheel.wheel_image_1, '1080x1080', class: 'img-responsive' %>
-          </div>
-          <div class="col-md-5">
-            <div class="row">
-              <div class="col-sm-6 col-md-12"><%= image_fu @wheel.wheel_image_1, '500x400c', class: 'img-responsive' %>
-              </div>
-              <div class="col-sm-6 col-md-12"><%= image_fu @wheel.wheel_image_1, '500x400w', class: 'img-responsive' %>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="col-md-8">
+        <h1><%= @wheel.name %></h1>
       </div>
-      <div class="col-md-3">
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <%= image_fu @wheel.wheel_image_1, '1080x1200', class: 'img-responsive' %>
+        <h3>All <%= @wheel.hub_type %> Wheels</h3>
+        <% get_cat_wheels(@wheel.hub_type) %>
+        <% @cat_wheels.each do |cw| %>
+          <%= link_to cw.name, refinery.wheels_wheel_path(cw) %><br />
+        <% end %>
+      </div>
+
+      <div class="col-md-6">
         
-        <h3>Related Wheels</h3>
+        
+        
+        
+<%= image_fu @wheel.wheel_image_1, '600x450+60+495', class: 'img-responsive', id: 'zoomed-in' %>
+<div class="row">
+          <div class="col-md-6">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td width="100">Profile:</td>
+                  <td><%= @wheel.profile %>mm</td>
+                </tr>
+                <tr>
+                  <td width="100">Spoke Count:</td>
+                  <td><%= @wheel.spoke_count %></td>
+                </tr>    
+                <tr>
+                  <td width="100">Spoke Type:</td>
+                  <td><%= @wheel.spoke_type %></td>
+                </tr>
+                <tr>
+                  <td width="100">Hub Material:</td>
+                  <td><%= @wheel.hub_finish %></td>
+                </tr>        
+              </tbody>
+            </table>
+            
+          </div>
+          <div class="col-md-6">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td width="100">Weight:</td>
+                  <td><%= @wheel.weight %> grams</td>
+                </tr>
+                <tr>
+                  <td width="100">Carbon Weave:</td>
+                  <td><%= @wheel.carbon_weave %></td>
+                </tr>    
+                <tr>
+                  <td width="100">Type of Use:</td>
+                  <td><%= @wheel.type_of_use %></td>
+                </tr>
+                <tr>
+                  <td width="100">Diameter:</td>
+                  <td><%= @wheel.diameter %></td>
+                </tr>        
+              </tbody>
+            </table>
+            
+
+          </div>
+
+          <div class="row">
+            <h3>Related Wheels</h3>
         <% @all_wheels = Refinery::Wheels::Wheel.all %>
         <div class="row">
           <div class="col-xs-6">
@@ -103,17 +109,23 @@
           </div>
         </div>
 
-        <h3>All <%= @wheel.hub_type %> Wheels</h3>
-        <% get_cat_wheels(@wheel.hub_type) %>
-        <% @cat_wheels.each do |cw| %>
-          <%= link_to cw.name, refinery.wheels_wheel_path(cw) %><br />
-        <% end %>
+        
+
+          </div>
+
+        </div>
+        
+    
+
+        
 
 
-
-
-
-
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        
+        
       </div>
 
   </div>
