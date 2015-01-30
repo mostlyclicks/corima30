@@ -31,20 +31,11 @@
     <div class="row">
       <div class="col-md-6">
         <%= image_fu @wheel.wheel_image_1, '1080x1200', class: 'img-responsive' %>
-        <h3>All <%= @wheel.hub_type %> Wheels</h3>
-        <% get_cat_wheels(@wheel.hub_type) %>
-        <% @cat_wheels.each do |cw| %>
-          <%= link_to cw.name, refinery.wheels_wheel_path(cw) %><br />
-        <% end %>
       </div>
-
-      <div class="col-md-6">
-        
-        
-        
-        
-<%= image_fu @wheel.wheel_image_1, '600x450+60+495', class: 'img-responsive', id: 'zoomed-in' %>
-<div class="row">
+      <div class="col-sm-12 col-md-6">
+    
+        <%= image_fu @wheel.wheel_image_1, '1080x450+320+495', class: 'img-responsive', id: 'zoomed-in' %>
+        <div class="row">
           <div class="col-md-6">
             <table class="table table-striped">
               <tbody>
@@ -66,7 +57,6 @@
                 </tr>        
               </tbody>
             </table>
-            
           </div>
           <div class="col-md-6">
             <table class="table table-striped">
@@ -89,12 +79,25 @@
                 </tr>        
               </tbody>
             </table>
-            
-
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-          <div class="row">
-            <h3>Related Wheels</h3>
+<section id="wheel-show-sub">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>All <%= @wheel.hub_type %> Wheels</h3>
+          <% get_cat_wheels(@wheel.hub_type) %>
+            <% @cat_wheels.each do |cw| %>
+              <%= link_to cw.name, refinery.wheels_wheel_path(cw) %><br />
+            <% end %>
+      </div>
+      <div class="col-md-6">
+        <h3>Related Wheels</h3>
         <% @all_wheels = Refinery::Wheels::Wheel.all %>
         <div class="row">
           <div class="col-xs-6">
@@ -108,26 +111,8 @@
             <caption><%= link_to @related_wheel.name, refinery.wheels_wheel_path(@related_wheel) %></caption>
           </div>
         </div>
-
-        
-
-          </div>
-
-        </div>
-        
-    
-
-        
-
-
-          </div>
-        </div>
       </div>
-      <div class="col-md-3">
-        
-        
-      </div>
-
+    </div>
   </div>
 </section>
 

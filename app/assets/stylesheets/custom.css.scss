@@ -34,15 +34,21 @@ $rand_num:random(500);
 //WHEEL SHOW
 #wheel-show-images {
   background-repeat:no-repeat;
-  background-size:500%;
-  background-position-y:0%;
+  background-size:200%;
+  background-position-y:260px;
+
   img {
-    //border-radius:10px;
-    // background-color:rgba(255,255,255,.9);
-    //border:1px solid rgba(155,155,155,.8);
     margin:10px 10px 10px 0;
-    // box-shadow:1px 1px 6px rgba(0,0,0,.1);
   }
+  #zoomed-in {
+    border:1px solid rgba(200,200,200,.2);
+    border-radius:30px;
+    margin-bottom:40px;
+    background-color:rgba(255,255,255,.8);
+  }
+}
+#wheel-show-sub {
+  h3 {border-bottom:1px solid rgba(0,0,0,.5);}
 }
 
 //L2-Wheels
