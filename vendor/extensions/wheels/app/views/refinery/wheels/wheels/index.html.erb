@@ -15,10 +15,16 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
-      <% @mcc_hero = @mcc_splus_wheels[2] %>
-      <%= image_fu @mcc_hero.wheel_image_1, '500x500c', class: 'img-responsive' %>
-      <h3 class="text-center">Corima MCC S+</h3>
-      <p class="text-center">Carbon hubs and spokes</p>
+      <div class="row">
+        <div class="col-xs-5 col-md-12">
+          <% @mcc_hero = @mcc_splus_wheels[2] %>
+          <%= image_fu @mcc_hero.wheel_image_1, '500x500c', class: 'img-responsive' %>
+        </div>
+        <div class="col-xs-7 col-md-12">
+          <h3>Corima MCC S+</h3>
+          <p>Carbon hubs and spokes</p>
+        </div>
+      </div>
       <ul>
         <% @mcc_splus_wheels.each do |w| %>
           <li><%= link_to w.name, refinery.wheels_wheel_path(w) %></li>
@@ -26,10 +32,16 @@
       </ul>
     </div>
     <div class="col-md-3">
-      <% @splus_hero = @splus_wheels[4] %>
-      <%= image_fu @splus_hero.wheel_image_1, '500x500c', class: 'img-responsive' %>
-      <h3 class="text-center">Corima S+</h3>
-      <p class="text-center">Carbon hubs and steel spokes</p>
+      <div class="row">
+        <div class="col-xs-5 col-md-12">
+          <% @splus_hero = @splus_wheels[4] %>
+          <%= image_fu @splus_hero.wheel_image_1, '500x500c', class: 'img-responsive' %>
+        </div>
+        <div class="col-xs-7 col-md-12">
+          <h3 class="text-center">Corima S+</h3>
+          <p class="text-center">Carbon hubs and steel spokes</p>
+        </div>
+      </div>
       <ul>
         <% @splus_wheels.each do |w| %>
           <li><%= link_to w.name, refinery.wheels_wheel_path(w) %></li>
@@ -37,10 +49,16 @@
       </ul>
     </div>
     <div class="col-md-3">
-      <% @s_hero = @s_wheels[1] %>
-      <%= image_fu @s_hero.wheel_image_1, '500x500c', class: 'img-responsive' %>
-      <h3 class="text-center">Corima S</h3>
-      <p class="text-center">Aluminum hubs and steel spokes</p>
+      <div class="row">
+        <div class="col-xs-5 col-md-12">
+          <% @s_hero = @s_wheels[1] %>
+          <%= image_fu @s_hero.wheel_image_1, '500x500c', class: 'img-responsive' %>
+        </div>
+        <div class="col-xs-7 col-md-12">
+          <h3 class="text-center">Corima S</h3>
+          <p class="text-center">Aluminum hubs and steel spokes</p>
+        </div>
+      </div>
       <ul>
         <% @s_wheels.each do |w| %>
           <li><%= link_to w.name, refinery.wheels_wheel_path(w) %></li>
@@ -48,10 +66,16 @@
       </ul>
     </div>
     <div class="col-md-3">
-      <% @no_s_hero = @no_s_wheels[2] %>
-      <%= image_fu @no_s_hero.wheel_image_1, '500x500c', class: 'img-responsive' %>
-      <h3 class="text-center">Corima</h3>
-      <p class="text-center">Alloy hubs and steel spokes</p>
+      <div class="row">
+        <div class="col-xs-5 col-md-12">
+          <% @no_s_hero = @no_s_wheels[2] %>
+          <%= image_fu @no_s_hero.wheel_image_1, '500x500c', class: 'img-responsive' %>
+        </div>
+        <div class="col-xs-7 col-md-12">
+          <h3 class="text-center">Corima</h3>
+          <p class="text-center">Alloy hubs and steel spokes</p>
+        </div>
+      </div>
       <ul>
         <% @no_s_wheels.each do |w| %>
           <li><%= link_to w.name, refinery.wheels_wheel_path(w) %></li>
