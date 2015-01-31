@@ -31,6 +31,23 @@ $rand_num:random(500);
 
 }
 
+//Wheel INDEX
+.wheel-index {
+  img {
+    border:1px solid rgba(0,0,0,.3);
+    border-radius:30px;
+  }
+  ul {
+    margin-bottom:1em;
+    margin-left:0;
+    padding-left:0;
+    li {
+      list-style: none;
+      padding:.5em 0;
+    }
+  }
+}
+
 //WHEEL SHOW
 #wheel-show-images {
   background-repeat:no-repeat;
@@ -41,14 +58,15 @@ $rand_num:random(500);
     margin:10px 10px 10px 0;
   }
   #zoomed-in {
-    border:1px solid rgba(200,200,200,.2);
+    border:1px solid rgba(200,200,200,.1);
     border-radius:30px;
     margin-bottom:40px;
-    background-color:rgba(255,255,255,.8);
+    background-color:rgba(255,255,255,.9);
   }
 }
 #wheel-show-sub {
   h3 {border-bottom:1px solid rgba(0,0,0,.5);}
+  .col-xs-6 caption {text-align:center;}
 }
 
 //L2-Wheels
