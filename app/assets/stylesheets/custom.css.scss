@@ -33,9 +33,11 @@ $rand_num:random(500);
 
 //Wheel INDEX
 .wheel-index {
+  background-repeat:no-repeat;
   img {
-    border:1px solid rgba(0,0,0,.3);
-    border-radius:30px;
+    border:1px solid rgba(200,200,200,.3);
+    border-radius:50%;
+    background-color:rgba(255,255,255,.6);
   }
   ul {
     margin-bottom:1em;
@@ -58,7 +60,7 @@ $rand_num:random(500);
     margin:10px 10px 10px 0;
   }
   #zoomed-in {
-    border:1px solid rgba(200,200,200,.1);
+    border:1px solid rgba(200,200,200,.3);
     border-radius:30px;
     margin-bottom:40px;
     background-color:rgba(255,255,255,.9);
