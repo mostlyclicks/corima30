@@ -1,20 +1,12 @@
-<h1>S+</h1>
-  <ul>
-    <% @splus_wheels.each do |w| %>
-      <li><%= link_to w.name, refinery.wheels_wheel_path(w) %></li>
-    <% end %>
-  </ul>
-<% end %>
-
-
-<% @bg_colors = ["mint", "gray", "yellow", "blue"] %>
+<% @bg_colors = ["gray"] %>
 <% @bg_image = @bg_colors.sample %>
-<% @rand_num = rand(5-95) %>
+<% @rand_offset_num = rand(5...95) %>
+<% @rand_color_num = rand(11...17) %>
 
 <style>
   #l2-wheels {
-    background-image:url(/assets/bg-<%= @bg_image %>.gif);
-    background-position-x:<%= @rand_num %>%;
+    background-image:url(/assets/bg-<%= @rand_color_num %>-<%= @bg_image %>.gif);
+    /*background-position-x:<%= @rand_num %>%;*/
   }
 </style>
 
