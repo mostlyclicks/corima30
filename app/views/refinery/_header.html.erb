@@ -19,9 +19,25 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <% presenter = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self) %>
-      <% presenter.max_depth = 1 %>
-      <%= presenter.to_html %>
+      <%# presenter = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self) %>
+      <%# presenter.max_depth = 1 %>
+      <%#= presenter.to_html %>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'HOME', root_path %></li>
+        <li><%= link_to 'ABOUT CORIMA', '/about-corima' %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">WHEELS <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'CORIMA MCC S+', '/corima-mcc-s-plus' %></li>
+            <li><%= link_to 'CORIMA S+', '/corima-s-plus' %></li>
+            <li><%= link_to 'CORIMA S', '/corima-s' %></li>
+            <li><%= link_to 'CORIMA', '/corima' %></li>
+          </ul>
+        </li>
+        <li><%= link_to 'DEALERS', '/dealers' %></li>
+        <li><%= link_to 'CONTACT US', '/contact-us' %></li>
+
+      </ul>
     </div>
   </div>
 </nav>
