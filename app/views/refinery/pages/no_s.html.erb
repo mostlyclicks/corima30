@@ -1,0 +1,31 @@
+<% @bg_colors = ["gray"] %>
+<% @bg_image = @bg_colors.sample %>
+<% @rand_offset_num = rand(5...95) %>
+<% @rand_color_num = rand(11...17) %>
+
+<style>
+  #l2-wheels {
+    background-image:url(/assets/bg-<%= @rand_color_num %>-<%= @bg_image %>.gif);
+    /*background-position-x:<%= @rand_num %>%;*/
+  }
+</style>
+
+
+<section id="l2-wheels">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>CORIMA</h1>
+        
+      </div>
+    </div>
+    <div class="row">
+      <% @no_s_wheels.each do |w| %>
+        <div class="col-md-3 col-xs-6">
+          <%= image_fu w.wheel_image_1, '400x400', class: 'img-responsive' %>
+          <%= w.name %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

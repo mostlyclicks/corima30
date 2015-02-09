@@ -42,6 +42,7 @@ $rand_num:random(500);
 //Wheel INDEX
 .wheel-index {
   background-repeat:no-repeat;
+
   img {
     border:5px solid rgba(200,200,200,.2);
     border-radius:50%;
@@ -81,8 +82,9 @@ $rand_num:random(500);
 
 //L2-Wheels
 #l2-wheels {
+    background-size:150%;
     background-repeat:no-repeat;
-    background-position-y:36%;
+    background-position-y:70%;
 
 }
 

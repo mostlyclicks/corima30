@@ -1,0 +1,32 @@
+<% @bg_colors = ["gray"] %>
+<% @bg_image = @bg_colors.sample %>
+<% @rand_offset_num = rand(5...95) %>
+<% @rand_color_num = rand(11...17) %>
+
+<style>
+  #l2-wheels {
+    background-image:url(/assets/bg-<%= @rand_color_num %>-<%= @bg_image %>.gif);
+    /*background-position-x:<%= @rand_num %>%;*/
+  }
+</style>
+
+
+<section id="l2-wheels">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>CORIMA S+</h1>
+        <p>Developed by our design office, the “S+” hubs combine strength and lightness with an exceptional finish. They benefit from the latest innovations with, for example, a 30-tooth free-wheel ratchet ring and a Ø 17 mm titanium/aluminium spindle. The CORIMA “S+” hubs are also fitted with top of the range cartridge bearings.
+The cassette bodies of the ‘‘S+’’ hubs are even easier to use, the three pawls are held in place by a spring and the same sprocket wrench can be used for removing the bearings.</p>
+      </div>
+    </div>
+    <div class="row">
+      <% @splus_wheels.each do |w| %>
+        <div class="col-md-3 col-xs-6">
+          <%= image_fu w.wheel_image_1, '400x400', class: 'img-responsive' %>
+          <%= w.name %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
