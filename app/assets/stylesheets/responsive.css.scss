@@ -20,6 +20,12 @@
     }
   }
 
+  #dealers {
+    background-size:70%;
+    background-position-x:620px;
+    background-position-y:50%;
+  }
+
   footer {
     min-height:200px;
     margin-top:20px;
@@ -41,12 +47,18 @@
   }
 
   //Wheel INDEX
-  .wheel-index {
-    
+  .wheel-index {  
     img {
       border:10px solid rgba(200,200,200,.2);
     }
   }
+  #dealers {
+    background-size:40%;
+    background-position-x:135%;
+    background-position-y:50%;
+    padding-bottom:200px;
+  }
+
 }
 
 

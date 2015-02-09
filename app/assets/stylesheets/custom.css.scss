@@ -3,6 +3,13 @@
 $rand_num:random(500);
 
 //HOME
+.navbar-brand {
+  position:relative;
+  img {
+    position:relative;
+    z-index:10000;
+  }
+}
 #home-main {
   padding:60px 20px;
   min-height:600px;
@@ -10,6 +17,7 @@ $rand_num:random(500);
   background-repeat:no-repeat;
   background-size:cover;
   background-position-y:57%;
+  margin-top:-20px;
   
   h1 {
     font-family:$roboto;
@@ -76,4 +84,17 @@ $rand_num:random(500);
     background-repeat:no-repeat;
     background-position-y:36%;
 
+}
+
+
+#dealers {
+  background-image:url(01_CORIMA_47MM_MCC_S+_TUBULAR_FR_12R_3K12K.png);
+  background-repeat:no-repeat;
+  background-size:200%;
+  background-position-x:120px;
+  background-position-y:5%;
+
+  .dealer {
+    margin-bottom:30px;
+  }
 }
