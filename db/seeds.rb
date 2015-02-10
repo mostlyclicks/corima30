@@ -1,4 +1,4 @@
-w# This file should contain all the record creation needed to seed the database with its default values.
+# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
@@ -111,3 +111,6 @@ Refinery::Wheels::Engine.load_seed
 #     model: w[:model]
 #   )
 # end
+
+# Added by Refinery CMS Inquiries engine
+Refinery::Inquiries::Engine.load_seed
