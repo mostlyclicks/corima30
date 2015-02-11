@@ -101,3 +101,44 @@ $rand_num:random(500);
     margin-bottom:30px;
   }
 }
+
+#ceramic-speed {
+
+  background-color:rgba(0,0,0,.7);
+  margin-bottom:0px;
+  margin-top:40px;
+  padding-top:0px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  // padding-bottom:20px;
+  h2 {
+    color:rgba(255,255,255,.3);
+    font-weight:100;
+  }
+  p {
+    color:rgba(255,255,255,.5);
+    font-size:120%;
+    margin-top:.5em;
+  }
+  #cs-product {
+    border-bottom:1px solid rgba(255,255,255,.2);
+    margin:0px auto;
+  }
+  #cs-logo {
+    margin-top:20px;
+    margin:20px auto 10px auto;
+  }
+  a {
+    color:yellow;
+    &:hover {
+      color:darken(yellow, 20%);
+    }
+  }
+}
+
+footer {
+  margin-top:0px !important;
+  min-height:300px;
+  //background-image:url(footer-bg.gif);
+  background-color:rgba(0,0,0,.9);
+ 
+}

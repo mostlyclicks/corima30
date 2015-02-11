@@ -26,6 +26,21 @@
     background-position-y:50%;
   }
 
+  #ceramic-speed {
+
+    #cs-logo {
+      margin:40px 0px 10px 0px;
+    }
+    #cs-product {
+      border-bottom:1px solid rgba(255,255,255,0);
+
+
+    }
+  }
+
+
+  
+
   footer {
     min-height:200px;
     margin-top:20px;
@@ -59,6 +74,19 @@
     padding-bottom:200px;
   }
 
+  #ceramic-speed {
+    #cs-logo {
+      margin:40px 0px 10px 0px;
+    }
+  }
+
+  #cs-product {
+    border-bottom:1px solid rgba(255,255,255,0);
+    position:relative;
+    display:block;
+    bottom:0px;
+  }
+
 }
 
 
@@ -69,5 +97,11 @@
   #wheel-show-images {
     background-size:100%;
     background-position-y:250px;
+  }6
+    #ceramic-speed {
+
+    #cs-logo {
+      margin:50px 0px 10px 0px;
+    }
   }
 }
