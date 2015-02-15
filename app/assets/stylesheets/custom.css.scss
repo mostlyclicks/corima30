@@ -157,10 +157,40 @@ $rand_num:random(500);
   }
 }
 
+#contact {
+  min-height:600px; 
+}
+
 footer {
+  color:rgba(255,255,255,.7);
+  span {
+    margin-top:20px;
+    margin:20px 5px;
+  }
+  h3 {
+    margin-top:0;
+  }
+  padding:40px 0 20px 0;
   margin-top:0px !important;
   min-height:300px;
   //background-image:url(footer-bg.gif);
   background-color:rgba(0,0,0,.9);
+  ul {
+    list-style-type:none;padding-left:0;
+    li {
+      a {
+        color:rgba(255,255,255,.7);
+        &:hover {
+          color:rgba(255,255,255,1);
+        }
+      }
+    }
+  }
+  #copyright {
+    border-top:1px dotted rgba(255,255,255,.1);;
+    padding-top:30px;
+    margin-top:30px;
+    color:rgba(255,255,255,.3);
+  }
  
 }
