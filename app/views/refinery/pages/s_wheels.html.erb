@@ -29,7 +29,7 @@
     </div>
     <div class="row">
       <% @splus_wheels.each do |w| %>
-        <div class="col-md-3 col-xs-6">
+        <div class="col-md-3 col-xs-6 text-center">
           <%= link_to (image_fu w.wheel_image_1, '400x400', class: 'img-responsive'), wheels_wheel_path(w) %>
           <%= link_to w.name, wheels_wheel_path(w) %>
         </div>

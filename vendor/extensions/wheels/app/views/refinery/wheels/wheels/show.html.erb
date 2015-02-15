@@ -100,12 +100,12 @@
         <h3>Related Wheels</h3>
         <% @all_wheels = Refinery::Wheels::Wheel.all %>
         <div class="row">
-          <div class="col-xs-6">
+          <div class="col-xs-6 text-center">
             <% get_frrr_wheel(@wheel.related_wheel_frrr_id) %>
             <%= image_fu @related_frrr_wheel.wheel_image_1, '600x600', class: 'img-responsive' %>
             <caption><%= link_to @related_frrr_wheel.name, refinery.wheels_wheel_path(@related_frrr_wheel) %></caption>
           </div>
-          <div class="col-xs-6">
+          <div class="col-xs-6 text-center">
             <% get_related_wheel(@wheel.related_wheel_type_id) %>
             <%= image_fu @related_wheel.wheel_image_1, '600x600', class: 'img-responsive' %>
             <caption><%= link_to @related_wheel.name, refinery.wheels_wheel_path(@related_wheel) %></caption>
