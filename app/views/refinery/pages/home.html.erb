@@ -33,20 +33,20 @@
     </div>
     <div class="row">
       <div class="col-xs-6 col-sm-3">
-        <%= image_fu @mcc_random.wheel_image_1, "960x1280", class: 'img-responsive' %>
-        <h5>CORIMA MCC S+</h5>
+        <%= link_to (image_fu @mcc_random.wheel_image_1, "960x1280", class: 'img-responsive'), '/corima-mcc-s-plus' %>
+        <h5><%= link_to 'CORIMA MCC S+', '/corima-mcc-s-plus' %> </h5>
       </div>
       <div class="col-xs-6 col-sm-3">
-        <%= image_fu @splus_random.wheel_image_1, "960x1280", class: 'img-responsive' %>
-        <h5>CORIMA S+</h5>
+        <%= link_to (image_fu @splus_random.wheel_image_1, "960x1280", class: 'img-responsive'), '/corima-s-plus' %>
+        <h5><%= link_to 'CORIMA S+', '/corima-s-plus' %></h5>
       </div>
       <div class="col-xs-6 col-sm-3">
-        <%= image_fu @s_random.wheel_image_1, "960x1280", class: 'img-responsive' %>
-        <h5>CORIMA S</h5>
+        <%= link_to (image_fu @s_random.wheel_image_1, "960x1280", class: 'img-responsive'), '/corima-s' %>
+        <h5><%= link_to 'CORIMA S', '/corima-s' %></h5>
       </div>
       <div class="col-xs-6 col-sm-3">
-        <%= image_fu @no_s_random.wheel_image_1, "960x1280", class: 'img-responsive' %>
-        <h5>CORIMA</h5>
+        <%= link_to (image_fu @no_s_random.wheel_image_1, "960x1280", class: 'img-responsive'), '/corima' %>
+        <h5><%= link_to 'CORIMA', '/corima' %></h5>
       </div>
       </div>
     </div>
