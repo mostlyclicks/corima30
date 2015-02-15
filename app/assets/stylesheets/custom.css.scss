@@ -59,6 +59,14 @@ $rand_num:random(500);
   }
 }
 
+#about-image {
+  background-image:url(about.png);
+  min-height:600px;
+  background-size:cover;
+  margin-top:-20px;
+
+}
+
 //WHEEL SHOW
 #wheel-show-images {
   background-repeat:no-repeat;
