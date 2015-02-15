@@ -97,6 +97,9 @@ $rand_num:random(500);
     background-position-y:70%;
     min-height:600px;
     padding-bottom:60px;
+    p {
+      height:4em;
+    }
 
 }
 
@@ -166,6 +169,7 @@ footer {
   span {
     margin-top:20px;
     margin:20px 5px;
+
   }
   h3 {
     margin-top:0;
