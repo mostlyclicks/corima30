@@ -5,7 +5,7 @@
 
 <style>
   #l2-wheels {
-    background-image:url(/assets/bg-<%= @rand_color_num %>-<%= @bg_image %>.gif);
+    /*background-image:url(/assets/bg-<%= @rand_color_num %>-<%= @bg_image %>.gif);*/
     /*background-position-x:<%= @rand_num %>%;*/
   }
 </style>
@@ -29,3 +29,21 @@
     </div>
   </div>
 </section>
+
+<section id="skewers">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 col-sm-offset-2">
+        <%= image_tag 'skewer2.png', class: 'img-responsive' %>
+      </div>
+      <div class="col-sm-5">
+        <h2>CORIMA Skewers</h2>
+        <p>The new Corima Skewers feature titanium axles and carbon release levers. Included with CORIMA MCC S+ and CORIMA S+ wheelsets. Available separately. <br />
+          Front: 35g, Rear: 38g
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/ceramicspeed' %>

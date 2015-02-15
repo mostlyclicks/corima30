@@ -32,9 +32,10 @@ $rand_num:random(500);
   background-size:180%;
   background-repeat:no-repeat;
   text-align:center;
+  padding-bottom:40px;
   img {
     margin-top:20px;
-    border-bottom:1px solid black;
+    border-bottom:1px solid rgba(0,0,0,.2);
   }
 
 }
@@ -112,11 +113,22 @@ $rand_num:random(500);
   }
 }
 
+#show-page {
+  min-height:500px;
+}
+
+#skewers {
+  h2 {
+    margin-top:30px;
+  }
+  background-color:rgba(100,100,100,.1);
+}
+
 #ceramic-speed {
 
   background-color:rgba(0,0,0,.7);
   margin-bottom:0px;
-  margin-top:40px;
+  margin-top:0px;
   padding-top:0px;
   border-bottom:1px solid rgba(255,255,255,.1);
   // padding-bottom:20px;
