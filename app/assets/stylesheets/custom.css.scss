@@ -132,9 +132,13 @@ $rand_num:random(500);
   background-color:rgba(100,100,100,.1);
 }
 
-#ceramic-speed {
+#cycling-ceramic {
 
-  background-color:rgba(0,0,0,.7);
+  // background-color:rgba(0,0,0,.7);
+  background-image:url(ceramic-cycling-bg.jpg);
+  background-size:cover;
+  background-position-y:50%;
+  background-repeat:no-repeat;
   margin-bottom:0px;
   margin-top:0px;
   padding-top:0px;
@@ -145,9 +149,9 @@ $rand_num:random(500);
     font-weight:100;
   }
   p {
-    color:rgba(255,255,255,.5);
+    color:rgba(255,255,255,.8);
     font-size:120%;
-    margin-top:.5em;
+    margin-top:3em;
   }
   #cs-product {
     border-bottom:1px solid rgba(255,255,255,.2);
