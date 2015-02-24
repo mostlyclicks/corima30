@@ -1,7 +1,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-2 col-md-offset-1">
+    <div class="col-md-2 col-xs-6">
       <ul>
         <li><%= link_to 'HOME', '/' %></li>
         <li><%= link_to 'ABOUT CORIMA', '/about-corima' %></li>
@@ -9,7 +9,7 @@
         <li><%= link_to 'CONTACT', '/contact' %></li>
       </ul>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-2 col-xs-6">
       <ul>
         <li><%= link_to 'CORIMA MCC S+', '/corima-mcc-s-plus' %></li>
         <li><%= link_to 'CORIMA S+', '/corima-s-plus' %></li>
@@ -17,7 +17,7 @@
         <li><%= link_to 'CORIMA', '/corima' %></li>
       </ul>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-4">
       <h3>DEALER INQUIRIES</h3>
       <p>CORIMA NORTH AMERICA<br />
           Lalonde Imports<br />
@@ -25,12 +25,15 @@
           <%= mail_to 'corimausa@gmail.com', 'corimausa@gmail.com' %><br />
           TEL +1 978 844 1801</p>
     </div>
-    <div class="col-md-2 col-md-offset-0 text-center col-sm-3 col-xs-4 col-xs-offset-4">
+    <div class="col-md-2 col-md-offset-0 text-center col-sm-4 col-sm-offset-0 col-xs-4 col-xs-offset-2">
       <%= image_tag 'made-in-france.png', class: 'img-responsive' %>
       <a href="https://www.facebook.com/corimausa"><span class="fa fa-facebook-official fa-2x"></span> </a> 
       <a href="http://instagram.com/corimausa"><span class="fa fa-instagram fa-2x"></span></a>
       <a href="#"><span class="fa fa-twitter-square fa-2x"></span></a>
 
+    </div>
+    <div class="col-md-2 col-sm-3 col-sm-offset-1 col-xs-4">
+      <%= image_tag '40anniversary.png', class: 'img-responsive' %>
     </div>
 
   </div>
