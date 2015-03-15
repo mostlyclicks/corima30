@@ -132,6 +132,18 @@ $rand_num:random(500);
   background-color:rgba(100,100,100,.1);
 }
 
+#color-type {
+  padding:40px 20px 0 20px;
+}
+
+#color-wheels {
+  background-image:url(wheels-colors.png);
+  background-size:cover;
+  height:250px;
+  background-position-x:50%;
+  border-bottom:1px solid rgba(0,0,0,.2);
+}
+
 #cycling-ceramic {
 
   // background-color:rgba(0,0,0,.7);
