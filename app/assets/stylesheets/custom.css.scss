@@ -25,6 +25,18 @@ $rand_num:random(500);
     font-size:140%;
     text-align:left;   
   }
+  h3 {
+    font-family:$roboto;
+    font-weight:100;
+    font-size:100%;
+  }
+  .flag {
+    width: 32px;
+    height: 32px;
+    background:url(flags.png) no-repeat
+  }
+
+  .flag.flag-ca {background-position: -32px 0}
 }
 
 #home-wheels {
