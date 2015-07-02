@@ -4,6 +4,7 @@ Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-wheels'
   s.version           = '1.0'
+  s.author            = 'mc'
   s.description       = 'Ruby on Rails Wheels extension for Refinery CMS'
   s.date              = '2015-01-08'
   s.summary           = 'Wheels extension for Refinery CMS'
