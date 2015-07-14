@@ -6,17 +6,16 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
   #home-main {
-    position:relative;
+    // position:relative;
     h1 {
-      position:absolute;
-      left:65%;
-      top:350px;
+      display:block;
+
     }
-    h3 {
-      position:absolute;
-      left:65%;
-      top:395px;
-    }
+    // h3 {
+    //   position:absolute;
+    //   left:65%;
+    //   top:395px;
+    // }
   }
   #home-wheels {
     background-size:100%;
