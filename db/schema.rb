@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150209223543) do
+ActiveRecord::Schema.define(:version => 20160414145015) do
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -186,6 +186,9 @@ ActiveRecord::Schema.define(:version => 20150209223543) do
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
     t.string   "slug"
+    t.float    "wheelset_price"
+    t.float    "wheelset_weight"
+    t.text     "wheelset_description"
   end
 
   add_index "refinery_wheels", ["slug"], :name => "index_refinery_wheels_on_slug"

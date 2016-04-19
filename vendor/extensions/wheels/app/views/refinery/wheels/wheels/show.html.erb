@@ -27,6 +27,18 @@
       <div class="col-md-8">
         <h1><%= @wheel.name %></h1>
       </div>
+      <div class="col-md-4">
+        <%= link_to 'Buy', '#',
+          class: "snipcart-add-item",
+          data: {:item_name => 'test wheel',:item_id => @wheel.id, :item_price => "1500.00", :item_weight => "20", :item_url => "/wheels/corima-32mm-mcc-s-front-tubular", :item_description => '32mm Front tubular'}
+
+          
+
+
+        %>
+
+
+      </div>
     </div>
     <div class="row">
       <div class="col-md-6">
