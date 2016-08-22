@@ -236,3 +236,6 @@ Refinery::Wheels::Engine.load_seed
 
 
 #Refinery::Inquiries::Engine.load_seed
+
+# Added by Refinery CMS Wheelsets extension
+Refinery::Wheelsets::Engine.load_seed

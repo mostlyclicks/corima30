@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      wheelsets:
+        title: Wheelsets
+    wheelsets:
+      admin:
+        wheelsets:
+          actions:
+            create_new: Lag en ny Wheelset
+            reorder: Endre rekkefølgen på Wheelsets
+            reorder_done: Ferdig å endre rekkefølgen Wheelsets
+          records:
+            title: Wheelsets
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Wheelsets enda. Klikk på "Lag en ny Wheelset" for å legge til din første wheelset.
+          wheelset:
+            view_live_html: Vis hvordan denne wheelset ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne wheelset
+            delete: Fjern denne wheelset permanent
+      wheelsets:
+        show:
+          other: Andre Wheelsets
+  activerecord:
+    attributes:
+      'refinery/wheelsets/wheelset':
+        name: Name
+        front_wheel: Front Wheel
+        rear_wheel: Rear Wheel
+        price: Price
+        description: Description

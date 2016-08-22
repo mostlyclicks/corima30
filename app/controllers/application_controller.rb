@@ -13,9 +13,13 @@ class ApplicationController < ActionController::Base
   before_filter :find_no_s
   before_filter :find_random_no_s
 
+ 
+
 
 
   protected
+
+  
 
   def find_mcc_splus
     @mcc_splus_wheels = Refinery::Wheels::Wheel.where(hub_type: 'MCC S+').order('profile asc')

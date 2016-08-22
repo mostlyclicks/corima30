@@ -1,0 +1,32 @@
+es:
+  refinery:
+    plugins:
+      wheelsets:
+        title: Wheelsets
+#        article: masculino/femenino
+    wheelsets:
+      admin:
+        wheelsets:
+          actions:
+            create_new: Crear nuevo wheelset
+            reorder: Reordenar wheelsets
+            reorder_done: Reordenación de wheelsets completada
+          records:
+            title: Wheelsets
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay wheelsets todavía. Pulsa en "Crear nuevo Wheelset" para crear tu primer wheelset.
+          wheelset:
+            view_live_html: Ver este wheelset como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este wheelset
+            delete: Borrar este wheelset para siempre
+      wheelsets:
+        show:
+          other: Otros wheelsets
+  activerecord:
+    attributes:
+      'refinery/wheelsets/wheelset':
+        name: Name
+        front_wheel: Front Wheel
+        rear_wheel: Rear Wheel
+        price: Price
+        description: Description

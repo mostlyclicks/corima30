@@ -1,0 +1,63 @@
+<%= form_for [refinery, :wheelsets_admin, @wheelset] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @wheelset,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <!-- get all front wheels -->
+
+  <div class="field">
+    <%= f.label :front_wheel_id -%>
+    <%= f.select(:front_wheel_id, @front_wheels.collect { |d| [d.name, d.id] })%>
+  </div>
+
+
+<%#= @front_wheels.class %>
+  <!-- get all rear wheels -->
+  <div class="field">
+    <%= f.label :rear_wheel_id -%>
+    <%= f.select(:rear_wheel_id, @rear_wheels.collect { |d| [d.name, d.id] })%>
+  </div>
+
+
+
+<!-- 
+  <div class='field'>
+    <%#= f.label :front_wheel -%>
+    <%#= f.text_field :front_wheel -%>
+  </div> -->
+
+<!--   <div class='field'>
+    <%= f.label :rear_wheel -%>
+    <%= f.text_field :rear_wheel -%>
+  </div> -->
+
+  <div class='field'>
+    <%= f.label :price -%>
+    <%= f.text_field :price -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:description],
+                :object => "wheelsets/wheelset" -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.wheelsets.admin.wheelsets.wheelset'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @wheelset.name) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

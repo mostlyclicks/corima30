@@ -3,6 +3,8 @@ PATH
   specs:
     refinerycms-wheels (1.0)
       refinerycms-core (~> 2.1.5)
+    refinerycms-wheelsets (1.0)
+      refinerycms-core (~> 2.1.5)
 
 GEM
   remote: https://rubygems.org/
@@ -248,6 +250,10 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 1.0.0)
   refinerycms-inquiries (~> 2.1.0)
   refinerycms-wheels!
+  refinerycms-wheelsets!
   sass (~> 3.2.19)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
+
+BUNDLED WITH
+   1.10.5

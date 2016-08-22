@@ -1,0 +1,33 @@
+zh-CN:
+  refinery:
+    plugins:
+      wheelsets:
+        title: Wheelsets
+    wheelsets:
+      admin:
+        wheelsets:
+          actions:
+            create_new: 建立新的 Wheelset
+            reorder: 对 Wheelsets 重新排序
+            reorder_done: 对 Wheelsets 的重新排序结束
+          records:
+            title: Wheelsets
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Wheelsets yet. Click "Add New Wheelset" to add your first wheelset.
+            no_items_yet: 目前没有 Wheelsets . 点击 "Add New Wheelset" 创建一个wheelset.
+          wheelset:
+            view_live_html: 查看 wheelset 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 wheelset
+            delete: 永久删除 wheelset
+      wheelsets:
+        show:
+          other: 其他 Wheelsets
+  activerecord:
+    attributes:
+      'refinery/wheelsets/wheelset':
+        name: Name
+        front_wheel: Front Wheel
+        rear_wheel: Rear Wheel
+        price: Price
+        description: Description

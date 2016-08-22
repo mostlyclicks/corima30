@@ -1,0 +1,31 @@
+nl:
+  refinery:
+    plugins:
+      wheelsets:
+        title: Wheelsets
+    wheelsets:
+      admin:
+        wheelsets:
+          actions:
+            create_new: Nieuwe Wheelset toevoegen
+            reorder: De volgorde van de Wheelsets wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Wheelset-volgorde
+          records:
+            title: Wheelsets
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Wheelsets. Druk op 'Nieuwe Wheelset toevoegen' om de eerste toe te voegen.
+          wheelset:
+            view_live_html: Deze wheelset op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze wheelset
+            delete: Deze wheelset definitief verwijderen
+      wheelsets:
+        show:
+          other: Andere Wheelsets
+  activerecord:
+    attributes:
+      'refinery/wheelsets/wheelset':
+        name: Name
+        front_wheel: Front Wheel
+        rear_wheel: Rear Wheel
+        price: Price
+        description: Description

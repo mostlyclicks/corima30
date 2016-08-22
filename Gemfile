@@ -57,3 +57,4 @@ gem 'refinerycms-inquiries', '~> 2.1.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'
 
 gem 'refinerycms-wheels', :path => 'vendor/extensions'
+gem 'refinerycms-wheelsets', :path => 'vendor/extensions'

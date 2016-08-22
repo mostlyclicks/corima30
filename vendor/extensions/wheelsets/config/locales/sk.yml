@@ -1,0 +1,31 @@
+sk:
+  refinery:
+    plugins:
+      wheelsets:
+        title: Wheelsets
+    wheelsets:
+      admin:
+        wheelsets:
+          actions:
+            create_new: Pridať Wheelset
+            reorder: Preusporiadať Wheelsets
+            reorder_done: Koniec radenia Wheelsets
+          records:
+            title: Wheelsets
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Wheelsets. Kliknite na "Pridať Wheelset" pre pridanie prvého wheelset.
+          wheelset:
+            view_live_html: Zobraziť náhľad wheelset<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť wheelset
+            delete: Zmazať wheelset
+      wheelsets:
+        show:
+          other: Daľšie Wheelsets
+  activerecord:
+    attributes:
+      'refinery/wheelsets/wheelset':
+        name: Name
+        front_wheel: Front Wheel
+        rear_wheel: Rear Wheel
+        price: Price
+        description: Description

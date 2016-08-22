@@ -1,0 +1,31 @@
+en:
+  refinery:
+    plugins:
+      wheelsets:
+        title: Wheelsets
+    wheelsets:
+      admin:
+        wheelsets:
+          actions:
+            create_new: Add New Wheelset
+            reorder: Reorder Wheelsets
+            reorder_done: Done Reordering Wheelsets
+          records:
+            title: Wheelsets
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Wheelsets yet. Click "Add New Wheelset" to add your first wheelset.
+          wheelset:
+            view_live_html: View this wheelset live <br/><em>(opens in a new window)</em>
+            edit: Edit this wheelset
+            delete: Remove this wheelset forever
+      wheelsets:
+        show:
+          other: Other Wheelsets
+  activerecord:
+    attributes:
+      'refinery/wheelsets/wheelset':
+        name: Name
+        front_wheel: Front Wheel
+        rear_wheel: Rear Wheel
+        price: Price
+        description: Description
