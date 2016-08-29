@@ -1,3 +1,42 @@
+<section id="wheelsets-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <% @front_wheel = Refinery::Wheels::Wheel.where(id: @wheelset.front_wheel_id) %>
+        <% @rear_wheel = Refinery::Wheels::Wheel.where(id: @wheelset.rear_wheel_id) %>
+
+        <h1><%= @wheelset.name %></h1>
+        <%=raw @wheelset.description %>
+        <h3><strong><%= number_to_currency(@wheelset.price) %></strong></h3>
+
+        <% @front_wheel.each do |c| %>
+          <p><%= c.name %><%= wheelset_wheel_weight(c.weight) %>
+          <% wheelset_weight_fr(c.weight) %>
+          <%= image_fu c.wheel_image_1, '500x600' %>
+        <% end %>
+        <br />
+        <% @rear_wheel.each do |c| %>
+          <%= c.name %><%= wheelset_wheel_weight(c.weight) %>
+          <% wheelset_weight_rr(c.weight) %><br />
+          <strong>Wheelset Weight: <%= calc_weights %></strong>
+        </p>
+          <%= image_fu c.wheel_image_1, '500x600' %>
+
+
+        <% end %>
+        
+
+        
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
 <% content_for :body_content_title do %>
   <%= @wheelset.name %>
 <% end %>
@@ -48,4 +87,4 @@
   </aside>
 <% end %>
 
-<%= render '/refinery/content_page' %>
+<%#= render '/refinery/content_page' %>

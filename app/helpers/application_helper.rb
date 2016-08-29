@@ -34,6 +34,22 @@ module ApplicationHelper
     end
   end
 
+  def wheelset_wheel_weight(ww)
+    " | " + ww.to_s + " grams" unless ww.blank?
+  end
+
+  def wheelset_weight_fr(fw)
+    @front_weight = fw
+  end
+
+  def wheelset_weight_rr(rw)
+    @rear_weight = rw
+  end
+
+  def calc_weights
+    (@rear_weight + @front_weight).to_s + ' grams'
+  end
+
 
   protected 
 
