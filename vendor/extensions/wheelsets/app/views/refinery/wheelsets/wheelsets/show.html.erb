@@ -1,36 +1,69 @@
-<section id="wheelsets-top">
+<% @front_wheel = Refinery::Wheels::Wheel.where(id: @wheelset.front_wheel_id) %>
+<% @rear_wheel = Refinery::Wheels::Wheel.where(id: @wheelset.rear_wheel_id) %>
+
+<% content_for :front_wheel_section do %>
+  <% @front_wheel.each do |c| %>
+    
+    <% wheelset_weight_fr(c.weight) %>
+    <%= image_fu c.wheel_image_1, '500x600', class: 'img-responsive'  %>
+    <%= c.name %><%= wheelset_wheel_weight(c.weight) %>
+  <% end %>
+<% end %>
+
+<% content_for :rear_wheel_section do %>
+  <% @rear_wheel.each do |c| %>
+    
+    <% wheelset_weight_rr(c.weight) %>
+    <%= image_fu c.wheel_image_1, '500x600', class: 'img-responsive' %>
+    <%= c.name %><%= wheelset_wheel_weight(c.weight) %>
+  <% end %>
+<% end %>
+
+
+<section id="wheelsets-top" style="padding-bottom:40px;">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <% @front_wheel = Refinery::Wheels::Wheel.where(id: @wheelset.front_wheel_id) %>
-        <% @rear_wheel = Refinery::Wheels::Wheel.where(id: @wheelset.rear_wheel_id) %>
-
         <h1><%= @wheelset.name %></h1>
-        <%=raw @wheelset.description %>
-        <h3><strong><%= number_to_currency(@wheelset.price) %></strong></h3>
-
-        <% @front_wheel.each do |c| %>
-          <p><%= c.name %><%= wheelset_wheel_weight(c.weight) %>
-          <% wheelset_weight_fr(c.weight) %>
-          <%= image_fu c.wheel_image_1, '500x600' %>
-        <% end %>
-        <br />
-        <% @rear_wheel.each do |c| %>
-          <%= c.name %><%= wheelset_wheel_weight(c.weight) %>
-          <% wheelset_weight_rr(c.weight) %><br />
-          <strong>Wheelset Weight: <%= calc_weights %></strong>
-        </p>
-          <%= image_fu c.wheel_image_1, '500x600' %>
-
-
-        <% end %>
-        
-
-        
-
       </div>
-
     </div>
+    <div class="row">
+      <div class="col-md-4">
+        <%=raw @wheelset.description %>
+        <h3>Wheelset Weight: <%= calc_weights %></h3>
+        <h3><strong><%= number_to_currency(@wheelset.price) %></strong></h3>
+      </div>
+    
+      <div class="col-md-4 text-center">
+        <%= yield :front_wheel_section %>
+      </div>
+      <div class="col-md-4 text-center">
+        <%= yield :rear_wheel_section %>
+      </div>
+    </div>
+    
+    
+
+        
+        
+
+
+        
+
+        <%# @rear_wheel.each do |c| %>
+          <%#= c.name %><%#= wheelset_wheel_weight(c.weight) %>
+          <!-- <%# wheelset_weight_rr(c.weight) %><br /> -->
+          <!-- <strong>Wheelset Weight: <%= calc_weights %></strong> -->
+        <!-- </p> -->
+          <%#= image_fu c.wheel_image_1, '500x600' %>
+        <%# end %>
+        
+
+        
+
+      
+
+    
   </div>
 
 </section>
