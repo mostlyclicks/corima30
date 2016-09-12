@@ -57,6 +57,30 @@
     min-height:200px;
     margin-top:20px;
   }
+
+  .ws-container {
+  position:relative;
+  height:230px;width:300px;
+  margin:0 auto;
+}
+.ws-left, .ws-right {
+  position:absolute;
+  
+  
+}
+
+.ws-left {
+  right:-30px;
+  z-index:20001;
+
+}
+
+.ws-right {
+  left:-30px;
+
+}
+
+
 }
 
 /* Medium devices (desktops, 992px and up) */

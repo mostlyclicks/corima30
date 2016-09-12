@@ -1,4 +1,4 @@
-<% content_for :body do %>
+s<% content_for :body do %>
   <ul id="wheelsets">
     <% @wheelsets.each do |wheelset| %>
       <li>
@@ -14,27 +14,7 @@
 <%# @rear_wheel = Refinery::Wheels::Wheel.where(id: @wheelset.rear_wheel_id) %>
 
 <style>
-.ws-container {
-  position:relative;
-  height:200px;width:300px;
-  margin:0 auto;
-}
-.ws-left, .ws-right {
-  position:absolute;
-  
-  
-}
 
-.ws-left {
-  right:-30px;
-  z-index:20001;
-
-}
-
-.ws-right {
-  left:-30px;
-
-}
 
 </style>
 
@@ -42,23 +22,38 @@
   <div class="container">
     <div class="row">
       <% @wheelsets.each do |w| %>
-        <div class="col-md-4 text-center">
+        <div class="col-sm-4 text-center">
           
           <h4 class="text-center"><%= link_to w.name, refinery.wheelsets_wheelset_path(w) %></h4>
 
           <% @front_wheel = Refinery::Wheels::Wheel.where(id: w.front_wheel_id) %>
           <% @rear_wheel = Refinery::Wheels::Wheel.where(id: w.rear_wheel_id) %>
 
+          <% @front_wheel.each do |fw| %>
+            <% @front_weight = fw.weight %>    
+            <% content_for :fr_wheel_image do %>
+              <%= image_fu fw.wheel_image_1, '500x600', class: 'img-responsive ws-left' %>
+            <% end %>
+          <% end %>
+
+          <% @rear_wheel.each do |rw| %>
+            <% @rear_weight = rw.weight %>
+            <% content_for :rr_wheel_image do %>
+              <%= image_fu rw.wheel_image_1, '500x600', class: 'img-responsive ws-right' %>
+            <% end %>
+          <% end %>
+          <small>Wheelset Weight:
+            <%= @front_weight + @rear_weight %>g
+
+          </small><br />
+          <strong><%= number_to_currency(w.price) %></strong>
+
           <div class="row ws-container">
-            <div class="col-md-6 ">
-              <% @front_wheel.each do |fw| %>
-                <%= image_fu fw.wheel_image_1, '500x600', class: 'img-responsive ws-left' %>
-              <% end %>
+            <div class="col-xs-6 ">
+              <%= yield :fr_wheel_image %>
             </div>
-            <div class="col-md-6">
-              <% @rear_wheel.each do |rw| %>
-                <%= image_fu rw.wheel_image_1, '500x600', class: 'img-responsive ws-right' %>
-              <% end %>
+            <div class="col-xs-6">
+              <%= yield :rr_wheel_image %>
             </div>
           </div>
           
