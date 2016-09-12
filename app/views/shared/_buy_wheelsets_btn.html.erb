@@ -1,0 +1,12 @@
+<% if @wheelset.price %>
+  <%= button_to 'Buy', '#',
+    class: "snipcart-add-item btn btn-lg btn-success btn-block",
+    data: {:item_name => @wheelset.name,
+           :item_id => @wheelset.id,
+           :item_price => @wheelset.price,
+           # :item_weight => @wheelset.wheelset_weight,
+           :item_url => "/wheelsets/" + @wheelset.slug,
+           :item_description => @wheelset.description
+          }
+  %>
+<% end %>
