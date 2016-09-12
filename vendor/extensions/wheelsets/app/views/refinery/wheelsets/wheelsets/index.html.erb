@@ -31,17 +31,12 @@ s<% content_for :body do %>
 
           <% @front_wheel.each do |fw| %>
             <% @front_weight = fw.weight %>    
-            <% content_for :fr_wheel_image do %>
-              <%= image_fu fw.wheel_image_1, '500x600', class: 'img-responsive ws-left' %>
-            <% end %>
           <% end %>
 
           <% @rear_wheel.each do |rw| %>
             <% @rear_weight = rw.weight %>
-            <% content_for :rr_wheel_image do %>
-              <%= image_fu rw.wheel_image_1, '500x600', class: 'img-responsive ws-right' %>
-            <% end %>
           <% end %>
+
           <small>Wheelset Weight:
             <%= @front_weight + @rear_weight %>g
 
@@ -50,10 +45,14 @@ s<% content_for :body do %>
 
           <div class="row ws-container">
             <div class="col-xs-6 ">
-              <%= yield :fr_wheel_image %>
+              <% @front_wheel.each do |fw| %>
+                <%= image_fu fw.wheel_image_1, '500x600', class: 'img-responsive ws-left' %>
+              <% end %>
             </div>
             <div class="col-xs-6">
-              <%= yield :rr_wheel_image %>
+              <% @front_wheel.each do |rw| %>
+                <%= image_fu rw.wheel_image_1, '500x600', class: 'img-responsive ws-right' %>
+              <% end %>
             </div>
           </div>
           
