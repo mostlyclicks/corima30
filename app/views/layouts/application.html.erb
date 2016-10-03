@@ -34,7 +34,9 @@
 
 
 <script type="text/javascript" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart"
-  data-api-key="MWQyYmI2YjUtMjhiOS00ODc5LTg1YTItNWZkODdjNDZjMTIxNjM1OTM2NjgxMTczNjIwMDU1"></script>
+  data-api-key="YTQ3MzRkNmMtZWFmYy00OGNjLWFlYjYtNTk1OGRkM2UzMGUwNjM1OTM2NjgxMTczNjIwMDU1"></script>
+
+
 
 <link type="text/css" href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" />
 
@@ -49,10 +51,31 @@
   <body id="<%= canonical_id @page %>">
     <%= site_bar -%>
     <div id="page_container">
+      <section id="cart-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1><%= link_to 'Shop CORIMA Store', '/wheelsets' %></h1>
+            </div>
+            <div class="col-md-6 snipcart-summary text-right" style="display:inline-block;">
+              <span style="text-transform:uppercase;">
+    Number of items: <span class="snipcart-total-items"></span> |
+    Total price: <span class="snipcart-total-price" style="margin-right:1em;"></span>
+
+              <a href="#" class="snipcart-checkout btn btn-default">YOUR CART</a>
+              <%#= button_to 'Checkout', '#', class: 'snipcart-checkout btn btn-default' %>
+            </span>
+            </div>
+          </div>
+        </div>
+      </section>
       <header id="header">
-        <%= render "/refinery/header" -%>
+      <%= render "/refinery/header" -%>
       </header>
       <section id="page">
+
+
+        
         <%= yield %>
       </section>
       <footer>
