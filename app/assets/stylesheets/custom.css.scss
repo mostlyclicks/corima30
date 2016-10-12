@@ -291,19 +291,19 @@ footer {
 }
 
 .ws-left, .ws-right, .feature-ws-right, .feature-ws-left {
-  position:absolute;
+  position:position;
 
 }
 // /.feature-ws-left, .feature-ws-right 
 
 .feature-ws-left {
-  left:0px;
-  z-index:20000;
+  // left:0px;
+  z-index:500;
   
 }
 
 .feature-ws-right {
-  left:110px;
+  left:-110px;
 }
 
 
@@ -336,7 +336,7 @@ footer {
 } 
 
 .wheelset-feature {
-  h5 {text-transform:uppercase;font-weight:900;letter-spacing:2px;padding-bottom:0px;}
+  h5 {text-transform:uppercase;font-weight:900;letter-spacing:2px;padding-bottom:0px;margin-top:4em;}
   h2 {margin-top:-.15em;padding:0;}
 
   margin-top:40px;

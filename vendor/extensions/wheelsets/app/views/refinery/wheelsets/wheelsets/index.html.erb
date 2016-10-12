@@ -17,18 +17,15 @@
 <section class="wheelset-feature">
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-4 col-md-offset-1">
+
+
       <h5>Featured Wheelset</h5>
       <h2><%=  link_to @feature_wheelset.name, refinery.wheelsets_wheelset_path(@feature_wheelset) %></h2>
-
-
       <% @front_wheel = Refinery::Wheels::Wheel.where(id: @feature_wheelset.front_wheel_id) %>
       <% @rear_wheel = Refinery::Wheels::Wheel.where(id: @feature_wheelset.rear_wheel_id) %>
 
 
-      
-      <%#= @feature_wheelset.front_wheel_id %>
-      <%#= @feature_wheelset.rear_wheel_id %>
       <% @front_wheel.each do |fw| %>
         <% 
           @fw_weight = fw.weight 
@@ -42,25 +39,35 @@
         %>
       <% end %>
 
-      
 
       <h4>Wheelset weight: <%= @fw_weight + @rw_weight %> grams | <%= number_to_currency(@feature_wheelset.price) %></h4>
-      <div class="row feature-ws-container">
-        <div class="col-xs-6 feature-ws-left">  
+
+
+
+     <% if @feature_wheelset.price %>
+      <%= button_to 'Buy', '#',
+        class: "snipcart-add-item btn btn-success btn-lg btn-block",
+        data: {:item_name => @feature_wheelset.name,
+               :item_id => @feature_wheelset.id,
+               :item_price => @feature_wheelset.price,
+               # :item_weight => @feature_wheelset.wheelset_weight,
+               :item_url => "/wheelsets/" + @feature_wheelset.slug,
+               :item_description => @feature_wheelset.description
+              }
+      %>
+    <% end %>
+      
+      
+      
+
+    </div>
+    <div class="col-md-7 feature-ws-container">
+      <div class="col-xs-6 feature-ws-left">  
           <%= image_fu @fw_image, '300x', class: 'feature-ws-left' %>
         </div>
         <div class="col-xs-6 feature-ws-right">
             <%= image_fu @rw_image, '300x', class: 'feature-ws-right' %>
         </div>
-      </div>
-      
-      
-      <%# @feature_wheelset.each do |fw| %>
-        <%#= fw.name %>
-      <%# end %>
-
-    </div>
-    <div class="col-md-4">
     </div>
   </div>
 </div>
