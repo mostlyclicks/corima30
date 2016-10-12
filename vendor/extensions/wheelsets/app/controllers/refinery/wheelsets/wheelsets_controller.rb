@@ -4,6 +4,7 @@ module Refinery
 
       before_filter :find_all_wheelsets
       before_filter :find_page
+      before_filter :get_feature_wheelset
 
       def index
         # you can use meta fields from your model instead (e.g. browser_title)
@@ -23,6 +24,10 @@ module Refinery
 
       def find_all_wheelsets
         @wheelsets = Wheelset.order('position ASC')
+      end
+
+      def get_feature_wheelset 
+        @feature_wheelset = @wheelsets.sample
       end
 
       def find_page
