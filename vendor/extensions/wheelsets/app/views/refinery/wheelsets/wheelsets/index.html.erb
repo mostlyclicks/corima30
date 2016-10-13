@@ -39,10 +39,7 @@
         %>
       <% end %>
 
-
       <h4>Wheelset weight: <%= @fw_weight + @rw_weight %> grams | <%= number_to_currency(@feature_wheelset.price) %></h4>
-
-
 
      <% if @feature_wheelset.price %>
       <%= button_to 'Buy', '#',
@@ -55,11 +52,8 @@
                :item_description => @feature_wheelset.description
               }
       %>
-    <% end %>
-      
-      
-      
-
+    <% end %><br />
+      <p class="text-center"><%= link_to 'See all wheels', '#corima-wheel-collection' %></p>
     </div>
     <div class="col-md-7 feature-ws-container">
       <div class="col-xs-6 feature-ws-left">  
@@ -70,11 +64,62 @@
         </div>
     </div>
   </div>
+
+  <div class="row">
+    <section id="ws-accessories">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-1">
+          <%= image_tag '89-PatinCorima02_BLANC.jpg', class: 'img-responsive' %>
+        </div>
+        <div class="col-md-7">
+          <h3>CORIMA Brake Pads</h3>
+          <p>Replacement brake pads for your CORIMA wheels provide great modulation and long-lasting stopping performance. Package includes 4 brake pads.</p>
+          <h4>$49.00</h4>
+          <small>CORIMA Cork brake pads. Set of 4.</small>
+          <%= button_to 'Buy', '#',
+        class: "snipcart-add-item btn btn-success",
+        data: {:item_name => 'CORIMA Brake Pads',
+               :item_id => 'acc_0001',
+               :item_price => 49.00,
+               :item_url => "/wheelsets/",
+               :item_description => 'CORIMA Cork brake pads. Set of 4'
+              }
+      %>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-1">
+          <%= image_tag 'blocagenew.jpg', class: 'img-responsive' %>
+        </div>
+        <div class="col-md-7">
+          <h3>CORIMA Ti/Carbon Skewers</h3>
+          <p>With a titanium shaft and carbon low-profile levers, CORIMA skewers will make an excellent upgrade to any wheelset. Front and rear skewer included.</p>
+          <h4>$90.00</h4>
+          <small>Front & Rear Titanium/Carbon QR Skewers</small>
+          <%= button_to 'Buy', '#',
+        class: "snipcart-add-item btn btn-success",
+        data: {:item_name => 'CORIMA Titanium/Carbon QR Skewers',
+               :item_id => 'acc_0002',
+               :item_price => 90.00,
+               :item_url => "/wheelsets/",
+               :item_description => 'CORIMA front and rear QR skewers.'
+              }
+      %>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  </div>
 </div>
 </section>
 <div class="clearfix"></div>
 
-<section class="wheel-index2">
+<section class="wheel-index2" id="corima-wheel-collection">
   <div class="container">
     <div class="row">
       <% @wheelsets.each do |w| %>
