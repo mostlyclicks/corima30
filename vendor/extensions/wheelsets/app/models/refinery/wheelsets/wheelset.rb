@@ -6,7 +6,7 @@ module Refinery
         
       self.table_name = 'refinery_wheelsets'
 
-      attr_accessible :name, :front_wheel, :rear_wheel, :price, :description, :position, :wheel_id, :front_wheel_id, :rear_wheel_id
+      attr_accessible :name, :front_wheel, :rear_wheel, :price, :shipping_weight, :description, :position, :wheel_id, :front_wheel_id, :rear_wheel_id
 
       validates :name, :presence => true, :uniqueness => true
 

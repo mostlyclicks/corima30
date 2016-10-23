@@ -47,7 +47,7 @@
         data: {:item_name => @feature_wheelset.name,
                :item_id => @feature_wheelset.id,
                :item_price => @feature_wheelset.price,
-               # :item_weight => @feature_wheelset.wheelset_weight,
+               :item_weight => @feature_wheelset.shipping_weight,
                :item_url => "/wheelsets/" + @feature_wheelset.slug,
                :item_description => @feature_wheelset.description
               }
@@ -83,6 +83,7 @@
                :item_id => 'acc_0001',
                :item_price => 49.00,
                :item_url => "/wheelsets/",
+               :item_weight => "0",
                :item_custom2_name => 'Campagnolo or Shimano-SRAM',
                :item_custom2_options => 'Campagnolo | Shimano',
                :item_description => 'CORIMA Cork brake pads. Set of 4'
@@ -106,6 +107,7 @@
         class: "snipcart-add-item btn btn-success",
         data: {:item_name => 'CORIMA Titanium/Carbon QR Skewers',
                :item_id => 'acc_0002',
+               :item_weight => '0',
                :item_price => 90.00,
                :item_url => "/wheelsets/",
                :item_description => 'CORIMA front and rear QR skewers.'
