@@ -50,6 +50,16 @@ module ApplicationHelper
     (@rear_weight + @front_weight).to_s + ' grams'
   end
 
+  def check_s_plus(wheelset)
+    if wheelset =~ (/(\+)/)
+      render 'shared/accessories_s_plus'
+    else
+      render 'shared/accessories_s' 
+    end
+  end
+
+
+
 
   protected 
 

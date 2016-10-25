@@ -35,6 +35,7 @@
         <h3><strong><%= number_to_currency(@wheelset.price) %></strong></h3>
         <%= render 'shared/buy_wheelsets_btn' %>
         <h4 class="text-center"><%= link_to 'See all wheelsets', '/wheelsets' %> </h4>
+        <%= check_s_plus(@wheelset.name) %>
       </div>
     
       <div class="col-md-4 text-center">
@@ -47,25 +48,13 @@
     
     
 
-        
-        
-
-
+    
         
 
-        <%# @rear_wheel.each do |c| %>
-          <%#= c.name %><%#= wheelset_wheel_weight(c.weight) %>
-          <!-- <%# wheelset_weight_rr(c.weight) %><br /> -->
-          <!-- <strong>Wheelset Weight: <%= calc_weights %></strong> -->
-        <!-- </p> -->
-          <%#= image_fu c.wheel_image_1, '500x600' %>
-        <%# end %>
-        
+
+    
 
         
-
-      
-
     
   </div>
 
