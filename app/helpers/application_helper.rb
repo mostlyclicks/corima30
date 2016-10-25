@@ -58,6 +58,14 @@ module ApplicationHelper
     end
   end
 
+  # def lighter_wheelset(current_wheel)
+    
+  # end
+
+  # def heavier_wheelset
+
+  # end
+
 
 
 

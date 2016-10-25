@@ -34,7 +34,10 @@
         <h3>Wheelset Weight: <%= calc_weights %></h3>
         <h3><strong><%= number_to_currency(@wheelset.price) %></strong></h3>
         <%= render 'shared/buy_wheelsets_btn' %>
-        <h4 class="text-center"><%= link_to 'See all wheelsets', '/wheelsets' %> </h4>
+        <h4 class="text-center">
+          <%= link_to 'lighter', 
+          <%= link_to 'See all wheelsets', '/wheelsets' %>
+        </h4>
         <%= check_s_plus(@wheelset.name) %>
       </div>
     
@@ -46,70 +49,10 @@
       </div>
     </div>
     
-    
-
-    
-        
-
-
-    
-
-        
-    
   </div>
 
 </section>
 
 
 
-<% content_for :body_content_title do %>
-  <%= @wheelset.name %>
-<% end %>
 
-<% content_for :body do %>
-  <section>
-    <h1>Name</h1>
-    <p>
-      <%=raw @wheelset.name %>
-    </p>
-  </section>
-  <section>
-    <h1>Front Wheel</h1>
-    <p>
-      <%=raw @wheelset.front_wheel %>
-    </p>
-  </section>
-  <section>
-    <h1>Rear Wheel</h1>
-    <p>
-      <%=raw @wheelset.rear_wheel %>
-    </p>
-  </section>
-  <section>
-    <h1>Price</h1>
-    <p>
-      <%=raw @wheelset.price %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
-    <p>
-      <%=raw @wheelset.description %>
-    </p>
-  </section>
-<% end %>
-
-<% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="wheelsets">
-      <% @wheelsets.each do |wheelset| %>
-        <li>
-          <%= link_to wheelset.name, refinery.wheelsets_wheelset_path(wheelset) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
-
-<%#= render '/refinery/content_page' %>
