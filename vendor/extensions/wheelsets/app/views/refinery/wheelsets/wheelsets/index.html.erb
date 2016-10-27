@@ -148,12 +148,12 @@
           <div class="row ws-container">
             <div class="col-xs-6 ">
               <% @front_wheel.each do |fw| %>
-                <%= image_fu fw.wheel_image_1, '500x600', class: 'img-responsive ws-left' %>
+                <%= link_to (image_fu fw.wheel_image_1, '500x600', class: 'img-responsive ws-left'), refinery.wheelsets_wheelset_path(w) %>
               <% end %>
             </div>
             <div class="col-xs-6">
               <% @rear_wheel.each do |rw| %>
-                <%= image_fu rw.wheel_image_1, '500x600', class: 'img-responsive ws-right' %>
+                <%= link_to (image_fu rw.wheel_image_1, '500x600', class: 'img-responsive ws-right'), refinery.wheelsets_wheelset_path(w) %>
               <% end %>
             </div>
           </div>
